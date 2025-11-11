@@ -8,12 +8,12 @@ public class IterativeFibonacci implements FibonacciStrategy {
         if (n == 1 || n == 0) {
             return n;
         }
-        long previous = 0;
+        long prev = 0;
         long current = 1;
         for (int i = 2; i <= n; i++) {
             long temp = current;
-            current += previous;
-            previous = temp;
+            current += prev;
+            prev = temp;
         }
         return current;
     }
